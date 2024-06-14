@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+
+    .buttons-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .btn{
+       display: flex;
+       background-color: aquamarine;
+       color: aliceblue;
+       border: none;
+       padding: 10px 20px;
+       font-size: 16px;
+       border-radius: 4px;
+       cursor: pointer;
+       transition: background-color 0.3s ease-in-out;
+       margin: 0 10px;
+    }
+    .btn:hover{
+        background-color: #0088b3;
+    }
+    .btn-danger{
+        background-color: red;
+        text-decoration: none !important;
+    }
+    .btn-danger:hover{
+        background-color: darkred;
+    }
+    .error-message{
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    a{
+        text-decoration: none !important;        
+    }
+</style>
+<div class="task-card">
+    <div class="card-header">
+        <h1>Deletar Tarefa:</h1>
+
+    </div>
+    <div class="card-body">
+        <p>Tem certeza que deseja deletar a tarefa <strong>{{object.title}}</strong></p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="buttons-container">
+                <input type="submit" value="Deletar" class="btn btn-danger">
+                <a href="{% url 'tasks_list' %}" class="btn-danger">Cancelar</a>
+            </div>            
+        </form>
+    </div>     
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body{
+            background-color: rgb(245, 245, 245);
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;            justify-content: center;
+            color: black;
+        }
+        header {
+            background-color: #0096c7;
+            color: azure;
+            text-align: center;
+        }
+        footer {
+            background-color: #ccc0;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #0096c7;
+            color: aliceblue;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li{
+            margin: 0 10px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 16px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover{
+            background-color: #32bbe8;
+        }
+        nav ul li.active a{
+            background-color: #666;
+
+        }
+        nav ul li.active a:hover{
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+            {% if user.is_authenticated %}
+                    <li>Olá, {{user.username}}</li>
+                    <li><a href="{% url 'new_task' %}">Add Tarefa</a></li>
+                    <li><a href="{% url 'tasks_list' %}">Tarefas</a></li>
+                    <li><a href="{% url 'logout' %}">Sair</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Criar conta</a></li>
+                <li><a href="{% url 'tasks_list' %}">Tarefas</a></li>
+                
+            {% endif %}
+               
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Luciana Furtado - Tasks</p>
+    </footer>
+</body>
+</html>
