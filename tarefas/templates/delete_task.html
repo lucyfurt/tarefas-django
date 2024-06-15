@@ -11,7 +11,7 @@
     }
     .btn{
        display: flex;
-       background-color: aquamarine;
+       background-color: #0096c7;
        color: aliceblue;
        border: none;
        padding: 10px 20px;
@@ -51,7 +51,7 @@
             {% csrf_token %}
             <div class="buttons-container">
                 <input type="submit" value="Deletar" class="btn btn-danger">
-                <a href="{% url 'tasks_list' %}" class="btn-danger">Cancelar</a>
+                <a href="{% url 'tasks_list' %}" class="btn">Cancelar</a>
             </div>            
         </form>
     </div>     

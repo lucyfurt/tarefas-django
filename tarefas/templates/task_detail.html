@@ -39,7 +39,7 @@
     }
     .btn{
        display: flex;
-       background-color: aquamarine;
+       background-color: #0096c7;
        color: aliceblue;
        border: none;
        padding: 10px 20px;
@@ -87,8 +87,14 @@
         <a href="{% url 'download_task_file' object.id %}" class="btn">Download file</a>
         <a href="{% url 'task_update' pk=object.pk %}" class="btn">Editar</a>
         <a href="{% url 'task_delete' pk=object.pk %}" class="btn btn-danger">Excluir</a>        
+        <a href="{% url 'tasks_list' %}" class="btn">Voltar</a>
+        {% else %}
+    <div class="buttons-container">
+        <a href="{% url 'tasks_list' %}" class="btn">Voltar</a>
     </div> 
+    
     {% endif %}   
-    <a href="{% url 'tasks_list' %}" class="btn">Voltar</a> 
+   
 </div>
+
 {% endblock %}

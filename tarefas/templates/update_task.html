@@ -23,10 +23,10 @@
     th, td{
         padding: 4px;
         text-align: left;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #f0eded;
     }
     th{
-        background-color: #0096c7;
+        background-color: #e9f4f7da;
     }
     input[type="text"], input[type="number"], select, textarea{
         padding: 8px;
@@ -95,7 +95,7 @@
 </style>
 <form method="post" enctype="multipart/form-data>">
     {% csrf_token %}
-    <h1>Ediar Tarefa</h1>
+    <h1>Editar Tarefa</h1>
     <table>
         {{form.as_table}}
     </table>
