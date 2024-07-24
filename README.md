@@ -1,16 +1,16 @@
-\# Task Management System
+# Task Management System
 
-\## Descrição
+## Descrição
 
 Este é um sistema de gestão de tarefas desenvolvido em Django, utilizando PostgreSQL como banco de dados e templates do Django para renderização de páginas HTML. O objetivo deste projeto é permitir aos usuários criar, visualizar, atualizar e excluir tarefas de forma simples e eficiente.
 
-\## Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - \*\*Django\*\*: Framework web utilizado para o desenvolvimento do backend.
 - \*\*PostgreSQL\*\*: Sistema de gerenciamento de banco de dados utilizado para armazenar os dados.
 - \*\*TEMPLATE DJANGO\*\*: Utilizado através dos templates do Django para renderizar as páginas do sistema.
 
-\## Funcionalidades
+## Funcionalidades
 
 - \*\*Cadastro de Usuários\*\*: Possibilidade de criar novos usuários.
 - \*\*Login/Logout\*\*: Sistema de autenticação para acesso seguro às funcionalidades.
