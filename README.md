@@ -6,15 +6,15 @@ Este é um sistema de gestão de tarefas desenvolvido em Django, utilizando Post
 
 ## Tecnologias Utilizadas
 
-- \*\*Django\*\*: Framework web utilizado para o desenvolvimento do backend.
-- \*\*PostgreSQL\*\*: Sistema de gerenciamento de banco de dados utilizado para armazenar os dados.
-- \*\*TEMPLATE DJANGO\*\*: Utilizado através dos templates do Django para renderizar as páginas do sistema.
+- Django: Framework web utilizado para o desenvolvimento do backend.
+- PostgreSQL: Sistema de gerenciamento de banco de dados utilizado para armazenar os dados.
+- TEMPLATE DJANGO: Utilizado através dos templates do Django para renderizar as páginas do sistema.
 
 ## Funcionalidades
 
-- \*\*Cadastro de Usuários\*\*: Possibilidade de criar novos usuários.
-- \*\*Login/Logout\*\*: Sistema de autenticação para acesso seguro às funcionalidades.
-- \*\*CRUD de Tarefas\*\*: Permite criar, visualizar, atualizar e excluir tarefas.
+- Cadastro de Usuários\: Possibilidade de criar novos usuários.
+- Login/Logout: Sistema de autenticação para acesso seguro às funcionalidades.
+- CRUD de Tarefas: Permite criar, visualizar, atualizar e excluir tarefas.
 
 
 ## Como Executar o Projeto
